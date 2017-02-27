@@ -9,10 +9,18 @@ h1 {
 p {
     color: red;
 }
-body{
+
+body {
     font-family: 'Raleway', sans-serif;
 }
-div{
+
+div {
+    width: 350px;
+    height: 225px;
+}
+
+div div {
+    width: 75px height: 75px;
     border: 2px solid;
     border-radius: 10px;
 }
@@ -27,14 +35,17 @@ div{
     height: 75px;
     max-height: 75px;
     text-align: center;
-    vertical-align: middle;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 6vmin;
+        margin: 1px;
+    margin-bottom:6px
+
 }
 
 .buttontoggle {
-    background-color:palegreen;/* Gray */
+    background-color: palegreen;
+    /* Gray */
     border: none;
     color: black;
     width: 75px;
@@ -42,24 +53,25 @@ div{
     height: 75px;
     max-height: 75px;
     text-align: center;
-    vertical-align: middle;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 6vmin;
+            margin: 1px;
+    margin-bottom:6px
 }
 
-
-label{
+label {
     display: block;
     height: 75px;
-  width: 75px;
-  background: #eee;
-  text-align: center;
+    width: 75px;
+    background: #eee;
+    text-align: center;
     /*margin: 20px 0;*/
-  position: fixed;
+    position: fixed;
 }
-input#lightswitch{
+
+input#lightswitch {
     position: absolute;
-    top:-9999px;
-    left:-9999px;
+    top: -9999px;
+    left: -9999px;
 }
