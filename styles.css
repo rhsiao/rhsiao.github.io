@@ -1,0 +1,65 @@
+body {
+    background-color: powderblue;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+div{
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: #e7e7e7;
+    /* Gray */
+    border: none;
+    color: black;
+    width: 75px;
+    max-width: 75px;
+    height: 75px;
+    max-height: 75px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttontoggle {
+    background-color:palegreen;/* Gray */
+    border: none;
+    color: black;
+    width: 75px;
+    max-width: 75px;
+    height: 75px;
+    max-height: 75px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+label{
+    display: block;
+    height: 75px;
+  width: 75px;
+  background: #eee;
+  text-align: center;
+    /*margin: 20px 0;*/
+  position: fixed;
+}
+input#lightswitch{
+    position: absolute;
+    top:-9999px;
+    left:-9999px;
+}

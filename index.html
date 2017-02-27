@@ -1,7 +1,50 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <link type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://use.fontawesome.com/939e9dd52c.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/scripts.js"></script>
+
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+
+    <div type="button" class="button" id="submitBtn1" onclick="btnColor('submitBtn1');readClick('Btn1')">
+        <h2>test</h2>
+    </div>
+    <div type="button" class="button" id="submitBtn2" onclick="btnColor('submitBtn2');readClick('Btn2')">
+        <h2>test</h2>
+    </div>
+    <div type="button" class="button" id="submitBtn3" onclick="btnColor('submitBtn3');readClick('Btn3')">
+        <h2>test</h2>
+    </div>
+    <div type="button" class="button" id="submitBtn4" onclick="btnColor('submitBtn4');readClick('Btn4')">
+        <h2>test</h2>
+    </div>
+
+    <!--  <label for="Btn1">Button</label>
+    <input type="checkbox" id="lightswitch" />
+-->
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC2iZ0NcFgJ7J7AYU2t__1Nl-igAjlInxc",
+            authDomain: "the-button-5c411.firebaseapp.com",
+            databaseURL: "https://the-button-5c411.firebaseio.com",
+            storageBucket: "the-button-5c411.appspot.com",
+            messagingSenderId: "118289571181"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="index.js"></script>
+    <!-- Type attribute is not required, it's just a label. Class attribute points to a class in the stylesheet(css). The value is the text on the button -->
+
 </body>
+
 </html>
