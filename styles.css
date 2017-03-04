@@ -27,7 +27,7 @@ div div div {
 }
 
 #splashscreen {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -59,6 +59,7 @@ div div div {
     top:25%;
     left:25%;
     position:fixed;
+    z-index: -1;
 }
 
 .first {
