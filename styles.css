@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-    color: blue;
+    color: black;
 }
 
 p {
@@ -14,15 +14,97 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-div {
+
+/*div {
     width: 350px;
     height: 225px;
-}
+}*/
 
-div div {
+div div div {
     width: 75px height: 75px;
     border: 2px solid;
     border-radius: 10px;
+}
+
+#splashscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
+
+#loginscreen {
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    height: 18em;   
+    z-index: -1;
+    margin-top: -9em;
+    /*set to a negative number 1/2 of your height*/
+    margin-left: -15em;
+    /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    position: fixed;
+}
+
+.Login {
+    float: left
+}
+
+.container {
+    display: flex;
+    top:25%;
+    left:25%;
+    position:fixed;
+}
+
+.first {
+    width: 350px;
+}
+
+.second {
+    width: 2000px;
+    height: 2000px;
+}
+
+.userDiv {}
+
+#usertext {
+    resize: none;
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-round {
+    border: 0px;
+    background-color: #4885ed;
+    border-radius: 999em;
+    width: 28px;
+    height: 28px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 1;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin: 7px;
+    z-index: -1
+}
+
+.btn-round span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -8px;
+    color: #FFF;
 }
 
 .button {
@@ -38,9 +120,8 @@ div div {
     text-decoration: none;
     display: inline-block;
     font-size: 1.5vmin;
-        margin: 1px;
-    margin-bottom:6px
-
+    margin: 1px;
+    margin-bottom: 6px
 }
 
 .buttontoggle {
@@ -56,22 +137,6 @@ div div {
     text-decoration: none;
     display: inline-block;
     font-size: 1.5vmin;
-            margin: 1px;
-    margin-bottom:6px
-}
-
-label {
-    display: block;
-    height: 75px;
-    width: 75px;
-    background: #eee;
-    text-align: center;
-    /*margin: 20px 0;*/
-    position: fixed;
-}
-
-input#lightswitch {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
+    margin: 1px;
+    margin-bottom: 6px
 }

@@ -23,3 +23,4 @@ function readClick(id) {
 
         }) //console.log(datasnapshot.val()) Console logs the value in the id, for debugging
 }
+
