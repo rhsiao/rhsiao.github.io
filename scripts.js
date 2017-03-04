@@ -15,6 +15,7 @@ $(document).ready(function() {
         $('.newuserDiv').fadeIn(500).delay(1000);
     });
 
+
 })
 
 var submitBtn = document.getElementById("submitBtn");
@@ -29,7 +30,9 @@ function btnColor(btn) {
         console.log(property.className)
     }
 }
-
+function submitClick(){
+    document.location.href = "rhsiao.github.io/selection.html";
+}
 function userloginClick() {
     //Hides loginscreen, displays user ID and password input
     var x = document.getElementById('loginscreen');

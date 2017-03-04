@@ -101,7 +101,7 @@ div div div {
     cursor: pointer;
     display: inline-block;
     margin: 7px;
-    z-index: -1
+    z-index: 0
 }
 
 .btn-round span {
