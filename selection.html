@@ -17,6 +17,10 @@
     <script type="text/javascript" src="/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="/font-awesome.min.css">
     <script type="text/javascript" src="/scripts.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <!--<div id="splashscreen">
@@ -30,74 +34,77 @@
 <body>
     <div class="container">
         <div class="first">
-            <div type="button" class="button" id="submitBtn1" onclick="btnColor('submitBtn1');readClick('Btn1')">
-                <h2>Button 1</h2>
+            <div type="button" class="buttonme" id="submitBtn1" onclick="btnColor('submitBtn1');readClick('Btn1')">
+                Button 1
             </div>
-            <div type="button" class="button" id="submitBtn2" onclick="btnColor('submitBtn2');readClick('Btn2')">
-                <h2>Button 2</h2>
+            <div type="button" class="buttonme" id="submitBtn2" onclick="btnColor('submitBtn2');readClick('Btn2')">
+               Button 2
             </div>
-            <div type="button" class="button" id="submitBtn3" onclick="btnColor('submitBtn3');readClick('Btn3')">
-                <h2>Button 3</h2>
+            <div type="button" class="buttonme" id="submitBtn3" onclick="btnColor('submitBtn3');readClick('Btn3')">
+                Button 3
             </div>
-            <div type="button" class="button" id="submitBtn4" onclick="btnColor('submitBtn4');readClick('Btn4')">
-                <h2>Button 4</h2>
-            </div>
-
-            <div type="button" class="button" id="submitBtn5" onclick="btnColor('submitBtn5');readClick('Btn5')">
-                <h2>Button 5</h2>
+            <div type="button" class="buttonme" id="submitBtn4" onclick="btnColor('submitBtn4');readClick('Btn4')">
+               Button 4
             </div>
 
-            <div type="button" class="button" id="submitBtn6" onclick="btnColor('submitBtn6');readClick('Btn6')">
-                <h2>Button 6</h2>
+            <div type="button" class="buttonme" id="submitBtn5" onclick="btnColor('submitBtn5');readClick('Btn5')">
+                Button 5
             </div>
 
-            <div type="button" class="button" id="submitBtn7" onclick="btnColor('submitBtn7');readClick('Btn7')">
-                <h2>Button 7</h2>
+            <div type="button" class="buttonme" id="submitBtn6" onclick="btnColor('submitBtn6');readClick('Btn6')">
+                Button 6
             </div>
 
-            <div type="button" class="button" id="submitBtn8" onclick="btnColor('submitBtn8');readClick('Btn8')">
-                <h2>Button 8</h2>
+            <div type="button" class="buttonme" id="submitBtn7" onclick="btnColor('submitBtn7');readClick('Btn7')">
+               Button 7
             </div>
 
-            <div type="button" class="button" id="submitBtn9" onclick="btnColor('submitBtn9');readClick('Btn9')">
-                <h2>Button 9</h2>
+            <div type="button" class="buttonme" id="submitBtn8" onclick="btnColor('submitBtn8');readClick('Btn8')">
+                Button 8
             </div>
 
-            <div type="button" class="button" id="submitBtn10" onclick="btnColor('submitBtn10');readClick('Btn10')">
-                <h2>Button 10</h2>
+            <div type="button" class="buttonme" id="submitBtn9" onclick="btnColor('submitBtn9');readClick('Btn9')">
+              Button 9
             </div>
 
-            <div type="button" class="button" id="submitBtn11" onclick="btnColor('submitBtn11');readClick('Btn11')">
-                <h2>Button 11</h2>
+            <div type="button" class="buttonme" id="submitBtn10" onclick="btnColor('submitBtn10');readClick('Btn10')">
+              Button 10
             </div>
 
-            <div type="button" class="button" id="submitBtn12" onclick="btnColor('submitBtn12');readClick('Btn12')">
-                <h2>Button 12</h2>
+            <div type="button" class="buttonme" id="submitBtn11" onclick="btnColor('submitBtn11');readClick('Btn11')">
+               Button 11
             </div>
+
+            <div type="button" class="buttonme" id="submitBtn12" onclick="btnColor('submitBtn12');readClick('Btn12')">
+             Button 12
+            </div>
+        </div>
+        <div  style="border:0px; float:right; margin-top:25%; margin-right:25px">
+            <button type="button" class="btn btn-info" onclick="returnHome()"style="">Home</button>
         </div>
 
 
 
 
-    <!--  <label for="Btn1">Button</label>
+        <!--  <label for="Btn1">Button</label>
     <input type="checkbox" id="lightswitch" />
 -->
 
 
-    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyC2iZ0NcFgJ7J7AYU2t__1Nl-igAjlInxc",
-            authDomain: "the-button-5c411.firebaseapp.com",
-            databaseURL: "https://the-button-5c411.firebaseio.com",
-            storageBucket: "the-button-5c411.appspot.com",
-            messagingSenderId: "118289571181"
-        };
-        firebase.initializeApp(config);
-    </script>
-    <script src="index.js"></script>
-    <!-- Type attribute is not required, it's just a label. Class attribute points to a class in the stylesheet(css). The value is the text on the button -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyC2iZ0NcFgJ7J7AYU2t__1Nl-igAjlInxc",
+                authDomain: "the-button-5c411.firebaseapp.com",
+                databaseURL: "https://the-button-5c411.firebaseio.com",
+                storageBucket: "the-button-5c411.appspot.com",
+                messagingSenderId: "118289571181"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="index.js"></script>
+        <!-- Type attribute is not required, it's just a label. Class attribute points to a class in the stylesheet(css). The value is the text on the button -->
 
 </body>
 

@@ -18,8 +18,7 @@ $(document).ready(function() {
         $('#loginscreen > .Login, .Guest, .New, #selectLogin').fadeIn(500).delay(500);
         $('.newuserDiv, .userDiv').fadeOut(500);
     });
-
-
+    
 })
 
 var submitBtn = document.getElementById("submitBtn");
@@ -30,12 +29,15 @@ function btnColor(btn) {
         property.className = 'buttontoggle'
         console.log(property.className)
     } else {
-        property.className = 'button';
+        property.className = 'buttonme';
         console.log(property.className)
     }
 }
 function submitClick(){
     document.location.href = "rhsiao.github.io/selection.html";
+}
+function returnHome(){
+    document.location.href = "rhsiao.github.io"
 }
 function userloginClick() {
     //Hides loginscreen, displays user ID and password input
