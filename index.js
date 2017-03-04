@@ -7,8 +7,6 @@ function resetData() {
     firebaseRef.child('Btn').remove();
 }
 
-var submitBtn = document.getElementById("submitBtn");
-
 function readClick(id) {
     var firebaseRef = firebase.database().ref().child('Btn') //Path to the root object in database
         //firebaseRef.set("") //Sets value to firebase. Can't set to main object, so need to set a key to add a child to that
@@ -23,4 +21,3 @@ function readClick(id) {
 
         }) //console.log(datasnapshot.val()) Console logs the value in the id, for debugging
 }
-

@@ -1,24 +1,18 @@
-body {
-    background-color: powderblue;
-}
 
-h1 {
+h2 {
     color: black;
-}
-
-p {
-    color: red;
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
     font-family: 'Raleway', sans-serif;
+    background-color:powderblue
 }
 
 
-/*div {
-    width: 350px;
-    height: 225px;
-}*/
+div {
+    font-family: 'Raleway', sans-serif;
+}
 
 div div div {
     width: 75px height: 75px;
@@ -39,7 +33,7 @@ div div div {
     top: 50%;
     left: 50%;
     width: 30em;
-    height: 18em;   
+    height: 18em;
     z-index: -1;
     margin-top: -9em;
     /*set to a negative number 1/2 of your height*/
@@ -47,18 +41,31 @@ div div div {
     /*set to a negative number 1/2 of your width*/
     border: 1px solid #ccc;
     background-color: #f3f3f3;
+    border-radius:20px;
     position: fixed;
 }
 
 .Login {
-    float: left
+    left:20%;
+    top:40%;
+    position:absolute;
+}
+
+.Guest {
+    top:40%;
+    right:20%;
+    position:absolute;
+}
+.New{
+    margin: 40% 40% 0 40%;
+    position:absolute;
 }
 
 .container {
     display: flex;
-    top:25%;
-    left:25%;
-    position:fixed;
+    top: 25%;
+    left: 25%;
+    position: fixed;
     z-index: -1;
 }
 
