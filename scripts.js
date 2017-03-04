@@ -12,7 +12,11 @@ $(document).ready(function() {
     });
     $('.New').click(function() {
         $('#loginscreen > .Login, .Guest, .New, #selectLogin').fadeOut(500);
-        $('.newuserDiv').fadeIn(500).delay(1000);
+        $('.newuserDiv').fadeIn(500).delay(800);
+    });
+    $('.returntoLogin').click(function(){
+        $('#loginscreen > .Login, .Guest, .New, #selectLogin').fadeIn(500).delay(500);
+        $('.newuserDiv, .userDiv').fadeOut(500);
     });
 
 
