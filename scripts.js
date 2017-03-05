@@ -34,7 +34,7 @@ function btnColor(btn) {
     }
 }
 function returnHome(){
-    document.location.href = "index.html"
+    document.location.href = "/index.html"
 }
 function userloginClick() {
     //Hides loginscreen, displays user ID and password input

@@ -31,7 +31,8 @@ function submitClick() {
     usertext = document.getElementById("usertext");
     var emailText = usertext.value;
     firebaseRef.child('Users').child('Email').set(emailText);
-    document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html";
+/*    document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html";*/
+        document.location.href = "selection.html";
 }
 
 function createUser() {
@@ -42,5 +43,6 @@ function createUser() {
     var userText = usertext.value;
     firebaseRef.child('Users').child(userText).child('Email').set(emailText);
 
-    document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html";
-}
+/*    document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html";*/
+
+    document.location.href = "selection.html";}
