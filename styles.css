@@ -1,10 +1,10 @@
 input {
-    font-family:'arial', sans-serif
+    font-family: 'arial', sans-serif
 }
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-color:powderblue
+    background-color: powderblue
 }
 
 div {
@@ -38,24 +38,25 @@ div div div {
     /*set to a negative number 1/2 of your width*/
     border: 1px solid #ccc;
     background-color: #f3f3f3;
-    border-radius:20px;
+    border-radius: 20px;
     position: fixed;
 }
 
 .Login {
-    left:20%;
-    top:40%;
-    position:absolute;
+    left: 20%;
+    top: 40%;
+    position: absolute;
 }
 
 .Guest {
-    top:40%;
-    right:20%;
-    position:absolute;
+    top: 40%;
+    right: 20%;
+    position: absolute;
 }
-.New{
+
+.New {
     margin: 40% 40% 0 40%;
-    position:absolute;
+    position: absolute;
 }
 
 .container {
@@ -76,10 +77,11 @@ div div div {
 }
 
 .userDiv {}
-#filterMenu{
+
+#filterMenu {
     top: 50%;
     left: 40%;
-    width: 40em;
+    width: 50em;
     height: 30em;
     z-index: -1;
     margin-top: -9em;
@@ -88,48 +90,68 @@ div div div {
     /*set to a negative number 1/2 of your width*/
     border: 1px solid #ccc;
     background-color: #f3f3f3;
-    border-radius:20px;
+    border-radius: 20px;
     position: fixed;
     display: none;
 }
 
-#filterWrap{
-width: 100%;
-height: 100%;
+#filterWrap {
+    width: 100%;
+    height: 100%;
 }
-.filter-col:nth-child(even){
-    position:relative;
-width: 45%;
-    height:5%;
-    margin-top: 20px;
 
-float: right;
+.filter-col1 {
+    position: relative;
+    width: 45%;
+    height: 5%;
+    float: left;
 }
-.filter-col:nth-child(odd){
-width: 50%;
-    height:5%;
-    margin-top:20px;
-    margin-left:5%;
-float: left;
+
+.filter-col2 {
+    position: relative;
+    width: 50%;
+    height: 5%;    float: left;
 }
+
+.filter-col {
+    position: relative;
+    width: 50%;
+    height: 5%;
+    left: 5%;
+    margin-top: 20px;
+    float: left;
+}
+
+
+#listHolder{
+    position:relative;
+    left:5%;
+    top:5%;
+    
+}
+
 #usertext {
     resize: none;
     width: 200px;
     margin-left: 10px;
     margin-right: 5px;
     margin-bottom: 5px;
-}#newUserName {
+}
+
+#newUserName {
     resize: none;
     width: 200px;
     margin-left: 10px;
     margin-right: 5px;
     margin-bottom: 5px;
 }
-#emailtext{
-    resize:none;
-    width:200px;
+
+#emailtext {
+    resize: none;
+    width: 200px;
 }
-.returntoLogin{
+
+.returntoLogin {
     z-index: -1;
 }
 
@@ -169,11 +191,11 @@ float: left;
     max-width: 75px;
     height: 75px;
     max-height: 75px;
-    line-height:75px;
+    line-height: 75px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size:75%;
+    font-size: 75%;
     margin: 1px;
     margin-bottom: 6px
 }
@@ -187,7 +209,7 @@ float: left;
     max-width: 75px;
     height: 75px;
     max-height: 75px;
-    line-height:75px;
+    line-height: 75px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -195,61 +217,66 @@ float: left;
     margin-bottom: 6px
 }
 
+
 /*CHECKBOX STUFF*/
 
 input[type=checkbox] {
-  opacity: 0;
-  float:left;
+    opacity: 0;
+    float: left;
 }
 
 input[type=checkbox] + label {
-  margin: 0 0 0 20px;
-  position: relative;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: 'Raleway';
-  float: left;
+    margin: 0 0 0 20px;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Raleway';
+    float: left;
 }
 
 input[type=checkbox] + label ~ label {
-  margin: 0 0 0 40px;
+    margin: 0 0 0 40px;
 }
 
 input[type=checkbox] + label::before {
-  content: ' ';
-  position: absolute;
-  left: -35px;
-  top: -3px;
-  width: 25px;
-  height: 25px;
-  display: block;
-  background: white;
-  border: 1px solid #A9A9A9;
+    content: ' ';
+    position: absolute;
+    left: -35px;
+    top: -3px;
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: white;
+    border: 1px solid #A9A9A9;
 }
 
 input[type=checkbox] + label::after {
-  content: ' ';
-  position: absolute;
-  left: -35px;
-  top: -3px;
-  width: 23px;
-  height: 23px;
-  display: block;
-  z-index: 1;
-  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjE4MS4yIDI3MyAxNyAxNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAxODEuMiAyNzMgMTcgMTYiPjxwYXRoIGQ9Ik0tMzA2LjMgNTEuMmwtMTEzLTExM2MtOC42LTguNi0yNC04LjYtMzQuMyAwbC01MDYuOSA1MDYuOS0yMTIuNC0yMTIuNGMtOC42LTguNi0yNC04LjYtMzQuMyAwbC0xMTMgMTEzYy04LjYgOC42LTguNiAyNCAwIDM0LjNsMjMxLjIgMjMxLjIgMTEzIDExM2M4LjYgOC42IDI0IDguNiAzNC4zIDBsMTEzLTExMyA1MjQtNTI0YzctMTAuMyA3LTI1LjctMS42LTM2eiIvPjxwYXRoIGZpbGw9IiMzNzM3MzciIGQ9Ik0xOTcuNiAyNzcuMmwtMS42LTEuNmMtLjEtLjEtLjMtLjEtLjUgMGwtNy40IDcuNC0zLjEtMy4xYy0uMS0uMS0uMy0uMS0uNSAwbC0xLjYgMS42Yy0uMS4xLS4xLjMgMCAuNWwzLjMgMy4zIDEuNiAxLjZjLjEuMS4zLjEuNSAwbDEuNi0xLjYgNy42LTcuNmMuMy0uMS4zLS4zLjEtLjV6Ii8+PHBhdGggZD0iTTExODcuMSAxNDMuN2wtNTYuNS01Ni41Yy01LjEtNS4xLTEyLTUuMS0xNy4xIDBsLTI1My41IDI1My41LTEwNi4yLTEwNi4yYy01LjEtNS4xLTEyLTUuMS0xNy4xIDBsLTU2LjUgNTYuNWMtNS4xIDUuMS01LjEgMTIgMCAxNy4xbDExNC43IDExNC43IDU2LjUgNTYuNWM1LjEgNS4xIDEyIDUuMSAxNy4xIDBsNTYuNS01Ni41IDI2Mi0yNjJjNS4yLTMuNCA1LjItMTIgLjEtMTcuMXpNMTYzNC4xIDE2OS40bC0zNy43LTM3LjdjLTMuNC0zLjQtOC42LTMuNC0xMiAwbC0xNjkuNSAxNjkuNS03MC4yLTcxLjljLTMuNC0zLjQtOC42LTMuNC0xMiAwbC0zNy43IDM3LjdjLTMuNCAzLjQtMy40IDguNiAwIDEybDc3LjEgNzcuMSAzNy43IDM3LjdjMy40IDMuNCA4LjYgMy40IDEyIDBsMzcuNy0zNy43IDE3NC43LTE3Ni40YzEuNi0xLjcgMS42LTYuOS0uMS0xMC4zeiIvPjwvc3ZnPg==') no-repeat center center;
-  -ms-transition: all .2s ease;
-  -webkit-transition: all .2s ease;
-  transition: all .3s ease;
-  -ms-transform: scale(0);
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  opacity: 0;
+    content: ' ';
+    position: absolute;
+    left: -35px;
+    top: -3px;
+    width: 23px;
+    height: 23px;
+    display: block;
+    z-index: 1;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjE4MS4yIDI3MyAxNyAxNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAxODEuMiAyNzMgMTcgMTYiPjxwYXRoIGQ9Ik0tMzA2LjMgNTEuMmwtMTEzLTExM2MtOC42LTguNi0yNC04LjYtMzQuMyAwbC01MDYuOSA1MDYuOS0yMTIuNC0yMTIuNGMtOC42LTguNi0yNC04LjYtMzQuMyAwbC0xMTMgMTEzYy04LjYgOC42LTguNiAyNCAwIDM0LjNsMjMxLjIgMjMxLjIgMTEzIDExM2M4LjYgOC42IDI0IDguNiAzNC4zIDBsMTEzLTExMyA1MjQtNTI0YzctMTAuMyA3LTI1LjctMS42LTM2eiIvPjxwYXRoIGZpbGw9IiMzNzM3MzciIGQ9Ik0xOTcuNiAyNzcuMmwtMS42LTEuNmMtLjEtLjEtLjMtLjEtLjUgMGwtNy40IDcuNC0zLjEtMy4xYy0uMS0uMS0uMy0uMS0uNSAwbC0xLjYgMS42Yy0uMS4xLS4xLjMgMCAuNWwzLjMgMy4zIDEuNiAxLjZjLjEuMS4zLjEuNSAwbDEuNi0xLjYgNy42LTcuNmMuMy0uMS4zLS4zLjEtLjV6Ii8+PHBhdGggZD0iTTExODcuMSAxNDMuN2wtNTYuNS01Ni41Yy01LjEtNS4xLTEyLTUuMS0xNy4xIDBsLTI1My41IDI1My41LTEwNi4yLTEwNi4yYy01LjEtNS4xLTEyLTUuMS0xNy4xIDBsLTU2LjUgNTYuNWMtNS4xIDUuMS01LjEgMTIgMCAxNy4xbDExNC43IDExNC43IDU2LjUgNTYuNWM1LjEgNS4xIDEyIDUuMSAxNy4xIDBsNTYuNS01Ni41IDI2Mi0yNjJjNS4yLTMuNCA1LjItMTIgLjEtMTcuMXpNMTYzNC4xIDE2OS40bC0zNy43LTM3LjdjLTMuNC0zLjQtOC42LTMuNC0xMiAwbC0xNjkuNSAxNjkuNS03MC4yLTcxLjljLTMuNC0zLjQtOC42LTMuNC0xMiAwbC0zNy43IDM3LjdjLTMuNCAzLjQtMy40IDguNiAwIDEybDc3LjEgNzcuMSAzNy43IDM3LjdjMy40IDMuNCA4LjYgMy40IDEyIDBsMzcuNy0zNy43IDE3NC43LTE3Ni40YzEuNi0xLjcgMS42LTYuOS0uMS0xMC4zeiIvPjwvc3ZnPg==') no-repeat center center;
+    -ms-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    transition: all .3s ease;
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
 }
 
 input[type=checkbox]:checked + label::after {
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  opacity: 1;
-}}
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+}
+
 /*CHECKBOX STUFF*/

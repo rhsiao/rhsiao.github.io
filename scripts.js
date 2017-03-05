@@ -49,20 +49,3 @@ function returnHome(){
      firebaseRef.child('Users').child('LoggedIn').remove();
 }
 
-function userloginClick() {
-    //Hides loginscreen, displays user ID and password input
-    var x = document.getElementById('loginscreen');
-    x.style.display = 'none';
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-
-}
-
-function returnToLogin(hidethisID) {
-    //    Hide Current Screen, Display the DIV that holds the choices id="loginscreen"
-    var x = document.getElementById(hidethisID);
-    x.style.display = 'none';
-}

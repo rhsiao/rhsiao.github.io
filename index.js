@@ -1,15 +1,48 @@
 window.onload = function() {
+    checkPreferences();
     resetData()
 };
 
 var firebaseRef = firebase.database().ref();
 
-/*function resetData() {
+function resetData() {
     for (count = 1; count < 13; count++) {
         name = 'Btn' + String(count);
         firebaseRef.child('Btn').child(name).child("Value").set(0);
     }
-};*/
+}
+
+function checkPreferences() {
+    firebaseRef.child("Users").child("LoggedIn").once('value', function(snapshot) {
+        var currentUser = (snapshot.val());
+        var firebasePersonRef = firebaseRef.child("Users").child(currentUser).child('Preferences');
+        firebasePersonRef.child('celery').once('value', function(datasnapshot) {
+            document.getElementById("celery").checked = datasnapshot.val();
+
+        });
+        firebasePersonRef.child('vegetarian').once('value', function(datasnapshot) {
+            document.getElementById("vegetarian").checked = datasnapshot.val();
+
+        });
+        firebasePersonRef.child('dairy').once('value', function(datasnapshot) {
+            document.getElementById("dairy").checked = datasnapshot.val();
+
+        });
+        firebasePersonRef.child('shellfish').once('value', function(datasnapshot) {
+            document.getElementById("shellfish").checked = datasnapshot.val();
+
+        });
+        firebasePersonRef.child('gluten').once('value', function(datasnapshot) {
+            document.getElementById("gluten").checked = datasnapshot.val();
+
+        });
+        firebasePersonRef.child('nuts').once('value', function(datasnapshot) {
+            document.getElementById("nuts").checked = datasnapshot.val();
+
+        });
+    });
+}
+
 
 function logoff() {
     firebaseRef.child('Users').child('LoggedIn').remove();
@@ -48,6 +81,26 @@ function loginClick() {
     })
 }
 
+function checktheBox(id) {
+    var itemID = document.getElementById(id);
+    return itemID.checked;
+}
+
+function savePreferences() {
+    firebaseRef.child("Users").child("LoggedIn").once('value', function(snapshot) {
+        var currentUser = (snapshot.val());
+        var firebasePersonRef = firebaseRef.child("Users").child(currentUser).child('Preferences');
+        /*        console.log(snapshot.val());
+                console.log(checktheBox("celery"));
+                console.log(currentUser);*/
+        firebasePersonRef.child('celery').set(checktheBox('celery'));
+        firebasePersonRef.child('nuts').set(checktheBox('nuts'));
+        firebasePersonRef.child('shellfish').set(checktheBox('shellfish'));
+        firebasePersonRef.child('vegetarian').set(checktheBox('vegetarian'));
+        firebasePersonRef.child('gluten').set(checktheBox('gluten'));
+        firebasePersonRef.child('dairy').set(checktheBox('dairy'));
+    });
+}
 
 function submitClick() {
     if (document.location.href == "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/index.html") {

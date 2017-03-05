@@ -91,7 +91,8 @@
 
     <div id="filterMenu">
         <div id="filterWrap">
-            <div class="filter-col" style="margin:0 auto; height:100% ;background-color: darkgray;">
+            <div class="filter-col1" style="margin:0 auto; height:100% ;background-color: darkgray;">
+                <div style="margin:5%; font-family:'Raleway';font-size:15px;">Pick what ingredients you want to exclude from our list or input your own!</div>
                 <div class="filter-col">
                     <input type="checkbox" id="vegetarian" />
                     <label for="vegetarian">Vegetarian</label>
@@ -101,25 +102,46 @@
                     <label for="nuts">Nut</label>
                 </div>
                 <div class="filter-col">
-                    <input type="checkbox" id="Shellfish" />
-                    <label for="Shellfish">Shellfish</label>
+                    <input type="checkbox" id="celery" />
+                    <label for="celery">Celery</label>
                 </div>
                 <div class="filter-col">
-                    <input type="checkbox" id="Celery" />
-                    <label for="Celery">Celery</label>
+                    <input type="checkbox" id="shellfish" />
+                    <label for="shellfish">Shellfish</label>
                 </div>
+                <div class="filter-col">
+                    <input type="checkbox" id="gluten" />
+                    <label for="gluten">Gluten</label>
+                </div>
+                <div class="filter-col">
+                    <input type="checkbox" id="dairy" />
+                    <label for="dairy">Dairy</label>
+                </div>
+
+            </div>
+            <div class="filter-col2" style=" height:90% ;background-color: darkgray;float:right;">
                 <div class="filter-col" style="font-family:'Raleway'; font-size:14px; ">Other:
-                    <textarea id="usertext" placeholder="Enter Ingredient Here..." style="width:80%"></textarea>
+                    <textarea id="customIngredient" placeholder="Enter Ingredient" style="width:80%"></textarea>
                 </div>
                 <button type="button" class="btn btn-primary btn-md" style="width:30%; margin-top:17%; margin-right:10%">Apply</button>
 
-
-
+                <div id="listHolder">
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </div>
             </div>
-            <div style="border:0px; float:right; margin-top:25%; margin-right:25px;" id="closeFilters">
-                <button type="button" class="btn btn-info" style="">Submit</button>
+
+            <div style="border:0px; float:right; margin-top:1%; margin-right:30px;position:relative;" id="closeFilters">
+                <button type="button" class="btn btn-info" onclick="savePreferences()" ;style="">Save Preferences</button>
             </div>
         </div>
+
+
+
+    </div>
 
 
     </div>
