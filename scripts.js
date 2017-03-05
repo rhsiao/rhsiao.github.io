@@ -33,9 +33,6 @@ function btnColor(btn) {
         console.log(property.className)
     }
 }
-function submitClick(){
-    document.location.href = "rhsiao.github.io/selection.html";
-}
 function returnHome(){
     document.location.href = "rhsiao.github.io"
 }

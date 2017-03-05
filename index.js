@@ -2,8 +2,10 @@ window.onload = function() {
     resetData()
 };
 
+var firebaseRef = firebase.database().ref();
+
 function resetData() {
-    var firebaseRef = firebase.database().ref();
+
     firebaseRef.child('Btn').remove();
 }
 
@@ -20,4 +22,12 @@ function readClick(id) {
             }
 
         }) //console.log(datasnapshot.val()) Console logs the value in the id, for debugging
+};
+
+
+function submitClick() {
+    usertext=document.getElementById("usertext");
+    var emailText = usertext.value;
+    firebaseRef.child('Users').child('Email').set(emailText);
+    document.location.href = "rhsiao.github.io/selection.html";
 }

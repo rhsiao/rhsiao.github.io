@@ -26,14 +26,14 @@
 
 <body>
 
-    <!--        <div id="splashscreen">
+    <div id="splashscreen">
         <div class="enter_link" style="left:25%; top:25%; position:fixed">
             Welcome! Touch to Begin.
             <div style="border:0px;">
                 <img src="https://www.nestle.in/asset-library/PublishingImages/revamp/about-us/all_images/01_Nestlelogo.jpg" />
             </div>
         </div>
-    </div>-->
+    </div>
     <div id="loginscreen">
         <div id=selectLogin style="position:absolute;margin-left:34px;font-family:'Raleway';color:black;">
             <h2>Please Select your Login</h2></div>
@@ -41,7 +41,7 @@
             <button type="button" class="btn btn-info" style="width:100px;">User Login</button>
         </div>
         <div class="Guest">
-            <button onclick = "submitClick()" type="button" class="btn btn-info" style="width:100px;">Guest Login</button>
+            <button onclick="submitClick()" type="button" class="btn btn-info" style="width:100px;">Guest Login</button>
         </div>
         <div class="New">
             <button type="button" class="btn btn-info" style="width:100px;">New User</button>
@@ -67,4 +67,18 @@
             </div>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC2iZ0NcFgJ7J7AYU2t__1Nl-igAjlInxc",
+            authDomain: "the-button-5c411.firebaseapp.com",
+            databaseURL: "https://the-button-5c411.firebaseio.com",
+            storageBucket: "the-button-5c411.appspot.com",
+            messagingSenderId: "118289571181"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="index.js"></script>
 </body>
