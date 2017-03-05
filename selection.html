@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
-<!--<div id="splashscreen">
+<!--
+<div id="splashscreen">
     <div class="enter_link" style="left:25%; top:25%; position:fixed">
         Welcome! Touch to Begin.
         <div class="enter_link" style="border: 0px">
@@ -35,55 +35,94 @@
     <div class="container">
         <div class="first">
             <div type="button" class="buttonme" id="submitBtn1" onclick="btnColor('submitBtn1');readClick('Btn1')">
-                Button 1
+                Tofu
             </div>
             <div type="button" class="buttonme" id="submitBtn2" onclick="btnColor('submitBtn2');readClick('Btn2')">
-                Button 2
+                Ground Beef
             </div>
             <div type="button" class="buttonme" id="submitBtn3" onclick="btnColor('submitBtn3');readClick('Btn3')">
-                Button 3
+                Chicken Breast
             </div>
             <div type="button" class="buttonme" id="submitBtn4" onclick="btnColor('submitBtn4');readClick('Btn4')">
-                Button 4
+                Bell Peppers
             </div>
 
             <div type="button" class="buttonme" id="submitBtn5" onclick="btnColor('submitBtn5');readClick('Btn5')">
-                Button 5
+                Broccoli
             </div>
 
             <div type="button" class="buttonme" id="submitBtn6" onclick="btnColor('submitBtn6');readClick('Btn6')">
-                Button 6
+                Tomatoes
             </div>
 
             <div type="button" class="buttonme" id="submitBtn7" onclick="btnColor('submitBtn7');readClick('Btn7')">
-                Button 7
+                Onions
             </div>
 
             <div type="button" class="buttonme" id="submitBtn8" onclick="btnColor('submitBtn8');readClick('Btn8')">
-                Button 8
+                Cheese
             </div>
 
             <div type="button" class="buttonme" id="submitBtn9" onclick="btnColor('submitBtn9');readClick('Btn9')">
-                Button 9
+                Lemon
             </div>
 
             <div type="button" class="buttonme" id="submitBtn10" onclick="btnColor('submitBtn10');readClick('Btn10')">
-                Button 10
+                Potatoes
             </div>
 
             <div type="button" class="buttonme" id="submitBtn11" onclick="btnColor('submitBtn11');readClick('Btn11')">
-                Button 11
+                Noodles
             </div>
 
             <div type="button" class="buttonme" id="submitBtn12" onclick="btnColor('submitBtn12');readClick('Btn12')">
-                Button 12
+                Rice
             </div>
+        </div>
+
+        <div style="border:0px; float:right; margin-top:25%; margin-right:25px;" id="gotoFilters">
+            <button type="button" class="btn btn-info" style="">Filters</button>
         </div>
         <div style="border:0px; float:right; margin-top:25%; margin-right:25px">
             <button type="button" class="btn btn-info" onclick="returnHome()" style="">Home</button>
         </div>
     </div>
 
+
+    <div id="filterMenu">
+        <div id="filterWrap">
+            <div class="filter-col" style="margin:0 auto; height:100% ;background-color: darkgray;">
+                <div class="filter-col">
+                    <input type="checkbox" id="vegetarian" />
+                    <label for="vegetarian">Vegetarian</label>
+                </div>
+                <div class="filter-col">
+                    <input type="checkbox" id="nuts" />
+                    <label for="nuts">Nut</label>
+                </div>
+                <div class="filter-col">
+                    <input type="checkbox" id="Shellfish" />
+                    <label for="Shellfish">Shellfish</label>
+                </div>
+                <div class="filter-col">
+                    <input type="checkbox" id="Celery" />
+                    <label for="Celery">Celery</label>
+                </div>
+                <div class="filter-col" style="font-family:'Raleway'; font-size:14px; ">Other:
+                    <textarea id="usertext" placeholder="Enter Ingredient Here..." style="width:80%"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary btn-md" style="width:30%; margin-top:17%; margin-right:10%">Apply</button>
+
+
+
+            </div>
+            <div style="border:0px; float:right; margin-top:25%; margin-right:25px;" id="closeFilters">
+                <button type="button" class="btn btn-info" style="">Submit</button>
+            </div>
+        </div>
+
+
+    </div>
     <!--  <label for="Btn1">Button</label>
     <input type="checkbox" id="lightswitch" />
 -->

@@ -4,12 +4,16 @@ window.onload = function() {
 
 var firebaseRef = firebase.database().ref();
 
-function resetData() {
+/*function resetData() {
     for (count = 1; count < 13; count++) {
         name = 'Btn' + String(count);
         firebaseRef.child('Btn').child(name).child("Value").set(0);
     }
-};
+};*/
+
+function logoff() {
+    firebaseRef.child('Users').child('LoggedIn').remove();
+}
 
 function readClick(id) {
     var firebaseRef = firebase.database().ref().child('Btn') //Path to the root object in database
@@ -26,23 +30,43 @@ function readClick(id) {
         }) //console.log(datasnapshot.val()) Console logs the value in the id, for debugging
 };
 
+function loginClick() {
+    var usertext = document.getElementById("usertext");
+    var emailText = usertext.value;
+    firebaseRef.child("Users").once('value', function(snapshot) {
+        if (!snapshot.hasChild(emailText)) {
+            //Alert User Does Not Exist
+            alert("User does not exist!")
+        } else {
+            firebaseRef.child("Users").child("LoggedIn").set(emailText);
+            if (document.location.href == "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/index.html") {
+                document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html";
+            } else {
+                document.location.href = "selection.html";
+            }
+        }
+    })
+}
+
 
 function submitClick() {
-    usertext = document.getElementById("usertext");
-    var emailText = usertext.value;
-    firebaseRef.child('Users').child('Email').set(emailText);
-/*    document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html";*/
+    if (document.location.href == "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/index.html") {
+        document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html";
+    } else {
         document.location.href = "selection.html";
+    }
 }
 
 function createUser() {
-
-    emailtext = document.getElementById("emailtext");
-    var emailText = emailtext.value;
-    usertext = document.getElementById("usertext");
-    var userText = usertext.value;
+    email = document.getElementById("emailtext");
+    var emailText = email.value;
+    user = document.getElementById("newUserName");
+    var userText = user.value;
     firebaseRef.child('Users').child(userText).child('Email').set(emailText);
-
-/*    document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html";*/
-
-    document.location.href = "selection.html";}
+    firebaseRef.child("Users").child("LoggedIn").set(userText);
+    if (document.location.href == "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/index.html") {
+        document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html";
+    } else {
+        document.location.href = "selection.html";
+    }
+}

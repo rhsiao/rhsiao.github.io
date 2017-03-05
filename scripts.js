@@ -18,6 +18,12 @@ $(document).ready(function() {
         $('#loginscreen > .Login, .Guest, .New, #selectLogin').fadeIn(500).delay(500);
         $('.newuserDiv, .userDiv').fadeOut(500);
     });
+    $('#gotoFilters').click(function(){
+       $('#filterMenu').fadeIn(500); 
+    });
+    $('#closeFilters').click(function(){
+        $('#filterMenu').fadeOut(500);
+    })
     
 })
 
@@ -34,8 +40,15 @@ function btnColor(btn) {
     }
 }
 function returnHome(){
-    document.location.href = "/index.html"
+    
+        if (document.location.href == "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html") {
+        document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/index.html";
+    } else {
+        document.location.href = "index.html";
+    }
+     firebaseRef.child('Users').child('LoggedIn').remove();
 }
+
 function userloginClick() {
     //Hides loginscreen, displays user ID and password input
     var x = document.getElementById('loginscreen');
