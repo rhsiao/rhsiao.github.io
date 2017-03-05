@@ -79,13 +79,21 @@ div div div {
 }
 
 .userDiv {}
-
+#filterMenu{
+    height:80%;
+    width:60%;
+    background-color:gray;
+}
 #usertext {
     resize: none;
     width: 200px;
     margin-left: 10px;
     margin-right: 5px;
     margin-bottom: 5px;
+}
+#emailtext{
+    resize:none;
+    width:200px;
 }
 .returntoLogin{
     z-index: -1;

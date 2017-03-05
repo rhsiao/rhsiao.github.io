@@ -34,7 +34,7 @@ function btnColor(btn) {
     }
 }
 function returnHome(){
-    document.location.href = "rhsiao.github.io"
+    document.location.href = "index.html"
 }
 function userloginClick() {
     //Hides loginscreen, displays user ID and password input
