@@ -3,14 +3,14 @@ window.onload = function() {
     resetData()
 };
 
-/*var firebaseRef = firebase.database().ref();
+var firebaseRef = firebase.database().ref();
 
 function resetData() {
     for (count = 1; count < 13; count++) {
         name = 'Btn' + String(count);
         firebaseRef.child('Btn').child(name).child("Value").set(0);
     }
-}*/
+}
 
 function checkPreferences() {
     firebaseRef.child("Users").child("LoggedIn").once('value', function(snapshot) {
