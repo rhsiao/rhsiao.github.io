@@ -3,7 +3,7 @@ window.onload = function() {
     resetData()
 };
 
-var firebaseRef = firebase.database().ref();
+firebaseRef = firebase.database().ref();
 
 function resetData() {
     for (count = 1; count < 13; count++) {
@@ -121,7 +121,7 @@ function guestClick() {
         'soy': false,
         'dairy': false,
         'gluten': false,
-        'shellfish':false
+        'shellfish': false
     };
 
     var firebasePersonRef = firebaseRef.child("Users").child('Guest').child('Preferences');
@@ -144,7 +144,7 @@ function createUser() {
         'soy': false,
         'dairy': false,
         'gluten': false,
-        'shellfish':false
+        'shellfish': false
     };
 
     var firebasePersonRef = firebaseRef.child("Users").child(userText).child('Preferences');
