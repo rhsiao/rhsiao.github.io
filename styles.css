@@ -79,13 +79,13 @@ div div div {
 
 #filterMenu {
     top: 30%;
-    left: 48%;
+    left: 50%;
     width: 40em;
     height: 30em;
     z-index: -1;
     margin-top: -9em;
     /*set to a negative number 1/2 of your height*/
-    margin-left: -15em;
+    margin-left: -8em;
     /*set to a negative number 1/2 of your width*/
     border: 1px solid #ccc;
     background-color: #f3f3f3;
