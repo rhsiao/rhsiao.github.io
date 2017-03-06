@@ -80,72 +80,86 @@
             </div>
         </div>
 
-        <div style="border:0px; float:right; margin-top:25%; margin-right:25px;" id="gotoFilters">
+        <div id="filterMenu">
+            <div id="filterWrap">
+                <div class="filter-col1" style="margin:0 auto; height:100% ;background-color: darkgray;">
+                    <div style="margin:5%; font-family:'Raleway';font-size:15px;">Pick what ingredients you want to exclude from our list or input your own!</div>
+                    <div style="margin-left:5%; font-family:'Raleway';font-size:20px;font-weight:bold">Diet</div>
+                    <div class="filter-col">
+                        <input type="checkbox" id="vegetarian" />
+                        <label for="vegetarian">Vegetarian</label>
+                    </div>
+                    <div class="filter-col" name="placeholder"></div>
+
+                    <div style="margin-top:20%;margin-left:5%; font-family:'Raleway';font-size:20px;font-weight:bold">Allergen</div>
+                    <div class="filter-col">
+                        <input type="checkbox" id="nuts" />
+                        <label for="nuts">Nut</label>
+                    </div>
+                    <div class="filter-col">
+                        <input type="checkbox" id="soy" />
+                        <label for="soy">Soy</label>
+                    </div>
+                    <div class="filter-col">
+                        <input type="checkbox" id="shellfish" />
+                        <label for="shellfish">Shellfish</label>
+                    </div>
+                    <div class="filter-col">
+                        <input type="checkbox" id="gluten" />
+                        <label for="gluten">Gluten</label>
+                    </div>
+                    <div class="filter-col">
+                        <input type="checkbox" id="dairy" />
+                        <label for="dairy">Dairy</label>
+                    </div>
+                    <div class="filter-col">
+                        <input type="checkbox" id="seafood" />
+                        <label for="seafood">Seafood</label>
+                    </div>
+
+                </div><!--
+                <div class="filter-col2" style=" height:90% ;background-color: darkgray;float:right;">
+                    <div class="filter-col" style="font-family:'Raleway'; font-size:20px; font-weight:bold; ">Other:
+                        <textarea id="customIngredient" placeholder="Enter Ingredient" style="width:80%; resize:none;"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-md" style="width:35%; margin-top:17%; margin-right:10%; ">Apply</button>
+
+                    <div id="listHolder" style="padding:10% 0 0 0">
+                        <ul>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                        </ul>
+                    </div>
+                </div>-->
+                
+                <!--
+                <div style="border:0px; float:right; margin-top:1%; margin-right:5px;" id="gotoFilters">
+                    <button type="button" class="btn btn-info" style="">Filters</button>
+                </div>-->
+                <div style="border:0px; float:right; margin-top:1%; margin-right:30px">
+                    <button type="button" class="btn btn-info" onclick="returnHome()" style="">Home</button>
+                </div>
+
+                <div style="border:0px; float:right; margin-top:1%; margin-right:5px;position:relative;" id="closeFilters">
+                    <button type="button" class="btn btn-info" onclick="savePreferences()" ;style="">Save Preferences</button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!--<div style="border:0px; float:right; margin-top:25%; margin-right:25px;" id="gotoFilters">
             <button type="button" class="btn btn-info" style="">Filters</button>
         </div>
         <div style="border:0px; float:right; margin-top:25%; margin-right:25px">
             <button type="button" class="btn btn-info" onclick="returnHome()" style="">Home</button>
         </div>
-    </div>
-
-
-    <div id="filterMenu">
-        <div id="filterWrap">
-            <div class="filter-col1" style="margin:0 auto; height:100% ;background-color: darkgray;">
-                <div style="margin:5%; font-family:'Raleway';font-size:15px;">Pick what ingredients you want to exclude from our list or input your own!</div>
-                <div style="margin-left:5%; font-family:'Raleway';font-size:20px;font-weight:bold">Diet</div>
-                <div class="filter-col">
-                    <input type="checkbox" id="vegetarian" />
-                    <label for="vegetarian">Vegetarian</label>
-                </div>
-                <div class="filter-col" name="placeholder"></div>
-                
-                <div style="margin-top:20%;margin-left:5%; font-family:'Raleway';font-size:20px;font-weight:bold">Allergen</div>
-                <div class="filter-col">
-                    <input type="checkbox" id="nuts" />
-                    <label for="nuts">Nut</label>
-                </div>
-                <div class="filter-col">
-                    <input type="checkbox" id="soy" />
-                    <label for="soy">Soy</label>
-                </div>
-                <div class="filter-col">
-                    <input type="checkbox" id="shellfish" />
-                    <label for="shellfish">Shellfish</label>
-                </div>
-                <div class="filter-col">
-                    <input type="checkbox" id="gluten" />
-                    <label for="gluten">Gluten</label>
-                </div>
-                <div class="filter-col">
-                    <input type="checkbox" id="dairy" />
-                    <label for="dairy">Dairy</label>
-                </div>
-
-            </div>
-            <div class="filter-col2" style=" height:90% ;background-color: darkgray;float:right;">
-                <div class="filter-col" style="font-family:'Raleway'; font-size:20px; ">Other:
-                    <textarea id="customIngredient" placeholder="Enter Ingredient" style="width:80%; resize:none;"></textarea>
-                </div>
-                <button type="button" class="btn btn-primary btn-md" style="width:30%; margin-top:17%; margin-right:10%">Apply</button>
-
-                <div id="listHolder" style="padding:5px">
-                    <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="border:0px; float:right; margin-top:1%; margin-right:30px;position:relative;" id="closeFilters">
-                <button type="button" class="btn btn-info" onclick="savePreferences()" ;style="">Save Preferences</button>
-            </div>
-        </div>
-
-
+-->
 
     </div>
+
 
 
     </div>

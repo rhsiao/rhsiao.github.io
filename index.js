@@ -38,7 +38,9 @@ function checkPreferences() {
         });
         firebasePersonRef.child('nuts').once('value', function(datasnapshot) {
             document.getElementById("nuts").checked = datasnapshot.val();
-
+        });
+        firebasePersonRef.child('seafood').once('value', function(datasnapshot) {
+            document.getElementById("seafood").checked = datasnapshot.val();
         });
     });
 }
@@ -100,6 +102,7 @@ function savePreferences() {
         firebasePersonRef.child('vegetarian').set(checktheBox('vegetarian'));
         firebasePersonRef.child('gluten').set(checktheBox('gluten'));
         firebasePersonRef.child('dairy').set(checktheBox('dairy'));
+        firebasePersonRef.child('seafood').set(checktheBox('seafood'));
     });
 }
 
@@ -121,7 +124,8 @@ function guestClick() {
         'soy': false,
         'dairy': false,
         'gluten': false,
-        'shellfish': false
+        'shellfish': false,
+        'seafood':false
     };
 
     var firebasePersonRef = firebaseRef.child("Users").child('Guest').child('Preferences');
@@ -144,7 +148,8 @@ function createUser() {
         'soy': false,
         'dairy': false,
         'gluten': false,
-        'shellfish': false
+        'shellfish': false,
+        'seafood':false
     };
 
     var firebasePersonRef = firebaseRef.child("Users").child(userText).child('Preferences');

@@ -24,11 +24,13 @@ div div div {
     bottom: 0;
     width: 100%;
     background-color: white;
+    height:100%;
+    position:absolute;
 }
 
 #loginscreen {
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 40%;
     width: 30em;
     height: 18em;
     z-index: -1;
@@ -39,6 +41,7 @@ div div div {
     border: 1px solid #ccc;
     background-color: #f3f3f3;
     border-radius: 20px;
+    position:fixed;
 }
 
 .Login {
@@ -77,8 +80,8 @@ div div div {
 
 #filterMenu {
     top: 30%;
-    left: 30%;
-    width: 50em;
+    left: 48%;
+    width: 40em;
     height: 30em;
     z-index: -1;
     margin-top: -9em;
@@ -88,8 +91,7 @@ div div div {
     border: 1px solid #ccc;
     background-color: #f3f3f3;
     border-radius: 20px;
-    position: fixed;
-    display: none;
+    position:absolute;
 }
 
 #filterWrap {
@@ -106,7 +108,7 @@ div div div {
 
 .filter-col2 {
     position: relative;
-    width: 50%;
+    width: 53%;
     height: 5%;
     float: left;
 }
@@ -191,9 +193,10 @@ div div div {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 75%;
+    font-size: 100%;
     margin: 1px;
-    margin-bottom: 6px
+    margin-bottom: 6px;
+    font-weight:bold;
 }
 
 .buttontoggle {
@@ -209,8 +212,10 @@ div div div {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-size:100%;
     margin: 1px;
-    margin-bottom: 6px
+    margin-bottom: 6px;
+    font-weight:bold;
 }
 
 
