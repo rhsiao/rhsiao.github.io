@@ -4,7 +4,8 @@ input {
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: powderblue
+    background-color: powderblue;
+    min-width: 50px;
 }
 
 div {
@@ -18,7 +19,6 @@ div div div {
 }
 
 #splashscreen {
-    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -39,7 +39,6 @@ div div div {
     border: 1px solid #ccc;
     background-color: #f3f3f3;
     border-radius: 20px;
-    position: fixed;
 }
 
 .Login {
@@ -61,22 +60,20 @@ div div div {
 
 .container {
     display: flex;
-    top: 25%;
-    left: 25%;
-    position: fixed;
+    top: 15%;
+    left: 15%;
     z-index: -1;
+    position: absolute;
 }
 
 .first {
-    width: 250px;
+    width: 350px;
 }
 
 .second {
     width: 2000px;
     height: 2000px;
 }
-
-.userDiv {}
 
 #filterMenu {
     top: 30%;
@@ -110,7 +107,8 @@ div div div {
 .filter-col2 {
     position: relative;
     width: 50%;
-    height: 5%;    float: left;
+    height: 5%;
+    float: left;
 }
 
 .filter-col {
@@ -122,12 +120,10 @@ div div div {
     float: left;
 }
 
-
-#listHolder{
-    position:relative;
-    left:5%;
-    top:5%;
-    
+#listHolder {
+    position: relative;
+    left: 5%;
+    top: 5%;
 }
 
 #usertext {
@@ -187,11 +183,11 @@ div div div {
     /* Gray */
     border: none;
     color: black;
-    width: 75px;
-    max-width: 75px;
-    height: 75px;
-    max-height: 75px;
-    line-height: 75px;
+    width: 100px;
+    max-width: 100px;
+    height: 150px;
+    max-height: 100px;
+    line-height: 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -205,11 +201,11 @@ div div div {
     /* Gray */
     border: none;
     color: black;
-    width: 75px;
-    max-width: 75px;
-    height: 75px;
-    max-height: 75px;
-    line-height: 75px;
+    width: 100px;
+    max-width: 100px;
+    height: 100px;
+    max-height: 100px;
+    line-height: 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
