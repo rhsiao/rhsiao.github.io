@@ -72,7 +72,7 @@
             </div>
 
             <div type="button" class="buttonme" id="submitBtn11" onclick="btnColor('submitBtn11');readClick('Btn11')">
-                Noodles
+                Pasta
             </div>
 
             <div type="button" class="buttonme" id="submitBtn12" onclick="btnColor('submitBtn12');readClick('Btn12')">
@@ -93,17 +93,21 @@
         <div id="filterWrap">
             <div class="filter-col1" style="margin:0 auto; height:100% ;background-color: darkgray;">
                 <div style="margin:5%; font-family:'Raleway';font-size:15px;">Pick what ingredients you want to exclude from our list or input your own!</div>
+                <div style="margin-left:5%; font-family:'Raleway';font-size:20px;font-weight:bold">Diet</div>
                 <div class="filter-col">
                     <input type="checkbox" id="vegetarian" />
                     <label for="vegetarian">Vegetarian</label>
                 </div>
+                <div class="filter-col" name="placeholder"></div>
+                
+                <div style="margin-top:20%;margin-left:5%; font-family:'Raleway';font-size:20px;font-weight:bold">Allergen</div>
                 <div class="filter-col">
                     <input type="checkbox" id="nuts" />
                     <label for="nuts">Nut</label>
                 </div>
                 <div class="filter-col">
-                    <input type="checkbox" id="celery" />
-                    <label for="celery">Celery</label>
+                    <input type="checkbox" id="soy" />
+                    <label for="soy">Soy</label>
                 </div>
                 <div class="filter-col">
                     <input type="checkbox" id="shellfish" />
@@ -120,12 +124,12 @@
 
             </div>
             <div class="filter-col2" style=" height:90% ;background-color: darkgray;float:right;">
-                <div class="filter-col" style="font-family:'Raleway'; font-size:14px; ">Other:
+                <div class="filter-col" style="font-family:'Raleway'; font-size:20px; ">Other:
                     <textarea id="customIngredient" placeholder="Enter Ingredient" style="width:80%"></textarea>
                 </div>
                 <button type="button" class="btn btn-primary btn-md" style="width:30%; margin-top:17%; margin-right:10%">Apply</button>
 
-                <div id="listHolder">
+                <div id="listHolder" style="padding:5px">
                     <ul>
                         <li>Coffee</li>
                         <li>Tea</li>

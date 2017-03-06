@@ -3,21 +3,21 @@ window.onload = function() {
     resetData()
 };
 
-var firebaseRef = firebase.database().ref();
+/*var firebaseRef = firebase.database().ref();
 
 function resetData() {
     for (count = 1; count < 13; count++) {
         name = 'Btn' + String(count);
         firebaseRef.child('Btn').child(name).child("Value").set(0);
     }
-}
+}*/
 
 function checkPreferences() {
     firebaseRef.child("Users").child("LoggedIn").once('value', function(snapshot) {
         var currentUser = (snapshot.val());
         var firebasePersonRef = firebaseRef.child("Users").child(currentUser).child('Preferences');
-        firebasePersonRef.child('celery').once('value', function(datasnapshot) {
-            document.getElementById("celery").checked = datasnapshot.val();
+        firebasePersonRef.child('soy').once('value', function(datasnapshot) {
+            document.getElementById("soy").checked = datasnapshot.val();
 
         });
         firebasePersonRef.child('vegetarian').once('value', function(datasnapshot) {
@@ -91,9 +91,10 @@ function savePreferences() {
         var currentUser = (snapshot.val());
         var firebasePersonRef = firebaseRef.child("Users").child(currentUser).child('Preferences');
         /*        console.log(snapshot.val());
-                console.log(checktheBox("celery"));
+                console.log(checktheBox("soy"));
                 console.log(currentUser);*/
-        firebasePersonRef.child('celery').set(checktheBox('celery'));
+
+        firebasePersonRef.child('soy').set(checktheBox('soy'));
         firebasePersonRef.child('nuts').set(checktheBox('nuts'));
         firebasePersonRef.child('shellfish').set(checktheBox('shellfish'));
         firebasePersonRef.child('vegetarian').set(checktheBox('vegetarian'));
@@ -110,12 +111,44 @@ function submitClick() {
     }
 }
 
+function guestClick() {
+    firebaseRef.child("Users").child("LoggedIn").set('Guest');
+    //initialize preferences
+    var postData = {
+        'soy': false,
+        'vegetarian': false,
+        'nuts': false,
+        'soy': false,
+        'dairy': false,
+        'gluten': false,
+        'shellfish':false
+    };
+
+    var firebasePersonRef = firebaseRef.child("Users").child('Guest').child('Preferences');
+    firebasePersonRef.set(postData);
+
+}
+
 function createUser() {
     email = document.getElementById("emailtext");
     var emailText = email.value;
     user = document.getElementById("newUserName");
     var userText = user.value;
+    //Create User
     firebaseRef.child('Users').child(userText).child('Email').set(emailText);
+    //initialize preferences
+    var postData = {
+        'soy': false,
+        'vegetarian': false,
+        'nuts': false,
+        'soy': false,
+        'dairy': false,
+        'gluten': false,
+        'shellfish':false
+    };
+
+    var firebasePersonRef = firebaseRef.child("Users").child(userText).child('Preferences');
+    firebase.database().ref('Users/' + userText + '/Preferences').set(postData);
     firebaseRef.child("Users").child("LoggedIn").set(userText);
     if (document.location.href == "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/index.html") {
         document.location.href = "file:///C:/Users/Richard/Desktop/ME310_Shelf/rhsiao.github.io/selection.html";

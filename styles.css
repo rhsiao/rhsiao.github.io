@@ -79,8 +79,8 @@ div div div {
 .userDiv {}
 
 #filterMenu {
-    top: 50%;
-    left: 40%;
+    top: 30%;
+    left: 30%;
     width: 50em;
     height: 30em;
     z-index: -1;
