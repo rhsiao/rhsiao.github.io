@@ -18,12 +18,12 @@ $(document).ready(function() {
         $('#loginscreen > .Login, .Guest, .New, #selectLogin').fadeIn(500).delay(500);
         $('.newuserDiv, .userDiv').fadeOut(500);
     });
-    $('#gotoFilters').click(function(){
+/*    $('#gotoFilters').click(function(){
        $('#filterMenu').fadeIn(500); 
     });
     $('#closeFilters').click(function(){
         $('#filterMenu').fadeOut(500);
-    })
+    })*/
     
 })
 

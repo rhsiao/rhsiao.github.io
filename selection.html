@@ -85,34 +85,34 @@
                     <div style="margin:5%; font-family:'Raleway';font-size:15px;">Pick what ingredients you want to exclude from our list or input your own!</div>
                     <div style="margin-left:5%; font-family:'Raleway';font-size:20px;font-weight:bold">Diet</div>
                     <div class="filter-col">
-                        <input type="checkbox" id="vegetarian" />
+                        <input type="checkbox" id="vegetarian" onclick="savePreferences()"/>
                         <label for="vegetarian">Vegetarian</label>
                     </div>
                     <div class="filter-col" name="placeholder"></div>
 
                     <div style="margin-top:20%;margin-left:5%; font-family:'Raleway';font-size:20px;font-weight:bold">Allergen</div>
                     <div class="filter-col">
-                        <input type="checkbox" id="nuts" />
+                        <input type="checkbox" id="nuts"onclick="savePreferences()" />
                         <label for="nuts">Nut</label>
                     </div>
                     <div class="filter-col">
-                        <input type="checkbox" id="soy" />
+                        <input type="checkbox" id="soy"onclick="savePreferences()" />
                         <label for="soy">Soy</label>
                     </div>
                     <div class="filter-col">
-                        <input type="checkbox" id="shellfish" />
+                        <input type="checkbox" id="shellfish"onclick="savePreferences()" />
                         <label for="shellfish">Shellfish</label>
                     </div>
                     <div class="filter-col">
-                        <input type="checkbox" id="gluten" />
+                        <input type="checkbox" id="gluten" onclick="savePreferences()"/>
                         <label for="gluten">Gluten</label>
                     </div>
                     <div class="filter-col">
-                        <input type="checkbox" id="dairy" />
+                        <input type="checkbox" id="dairy" onclick="savePreferences()"/>
                         <label for="dairy">Dairy</label>
                     </div>
                     <div class="filter-col">
-                        <input type="checkbox" id="seafood" />
+                        <input type="checkbox" id="seafood" onclick="savePreferences()" />
                         <label for="seafood">Seafood</label>
                     </div>
 
@@ -136,13 +136,13 @@
                 <div style="border:0px; float:right; margin-top:1%; margin-right:5px;" id="gotoFilters">
                     <button type="button" class="btn btn-info" style="">Filters</button>
                 </div>-->
-                <div style="border:0px; float:right; margin-top:1%; margin-right:30px">
+                <div style="border:0px; float:left; margin-top:1%; margin-left: 30px;margin-right:30px">
                     <button type="button" class="btn btn-info" onclick="returnHome()" style="">Home</button>
                 </div>
-
+<!--
                 <div style="border:0px; float:right; margin-top:1%; margin-right:5px;position:relative;" id="closeFilters">
                     <button type="button" class="btn btn-info" onclick="savePreferences()" ;style="">Save Preferences</button>
-                </div>
+                </div>-->
             </div>
 
 
