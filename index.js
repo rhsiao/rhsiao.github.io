@@ -1,7 +1,9 @@
+/*
 window.onload = function() {
     checkPreferences();
     resetData()
 };
+*/
 
 firebaseRef = firebase.database().ref();
 
@@ -79,6 +81,22 @@ function loginClick() {
             } else {
                 document.location.href = "selection.html";
             }
+        }
+    })
+}
+
+function printButton(){ //changes firebase datavalue of the print key. Turns off from the other end.
+    var firebaseRef = firebase.database().ref().child('Print')
+    firebaseRef.once('value',function(snapshot){
+        if (snapshot.val() == null){ //error just in case the print is null. Default should be 0.
+            firebaseRef.set(1);   
+        }
+        else if(snapshot.val() == 1){
+            firebaseRef.set(0);
+            alert("Please press the button again.")
+        }
+        else{
+            firebaseRef.set(1);
         }
     })
 }

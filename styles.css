@@ -69,7 +69,7 @@ div div div {
 }
 
 .first {
-    width: 350px;
+    width: 450px;
 }
 
 .second {
@@ -85,7 +85,7 @@ div div div {
     z-index: -1;
     margin-top: -9em;
     /*set to a negative number 1/2 of your height*/
-    margin-left: -8em;
+    margin-left: -5em;
     /*set to a negative number 1/2 of your width*/
     border: 1px solid #ccc;
     background-color: #f3f3f3;

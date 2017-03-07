@@ -36,42 +36,45 @@
             <div type="button" class="buttonme" id="submitBtn1" onclick="btnColor('submitBtn1');readClick('Btn1')">
                 Tofu
             </div>
+
+            <div type="button" class="buttonme" id="submitBtn4" onclick="btnColor('submitBtn4');readClick('Btn4')">
+                Bell_Peppers
+            </div>
+            <div type="button" class="buttonme" id="submitBtn8" onclick="btnColor('submitBtn8');readClick('Btn8')">
+                Cheese
+            </div>
+
+
+            <div type="button" class="buttonme" id="submitBtn11" onclick="btnColor('submitBtn11');readClick('Btn11')">
+                Pasta
+            </div>
             <div type="button" class="buttonme" id="submitBtn2" onclick="btnColor('submitBtn2');readClick('Btn2')">
                 Ground_Beef
             </div>
+            
+            <div type="button" class="buttonme" id="submitBtn6" onclick="btnColor('submitBtn6');readClick('Btn6')">
+                Tomatoes
+            </div>
+            <div type="button" class="buttonme" id="submitBtn7" onclick="btnColor('submitBtn7');readClick('Btn7')">
+                Onions
+            </div>
+
+
+            <div type="button" class="buttonme" id="submitBtn10" onclick="btnColor('submitBtn10');readClick('Btn10')">
+                Potatoes
+            </div>
+
+
             <div type="button" class="buttonme" id="submitBtn3" onclick="btnColor('submitBtn3');readClick('Btn3')">
                 Chicken_Breast
-            </div>
-            <div type="button" class="buttonme" id="submitBtn4" onclick="btnColor('submitBtn4');readClick('Btn4')">
-                Bell_Peppers
             </div>
 
             <div type="button" class="buttonme" id="submitBtn5" onclick="btnColor('submitBtn5');readClick('Btn5')">
                 Broccoli
             </div>
 
-            <div type="button" class="buttonme" id="submitBtn6" onclick="btnColor('submitBtn6');readClick('Btn6')">
-                Tomatoes
-            </div>
-
-            <div type="button" class="buttonme" id="submitBtn7" onclick="btnColor('submitBtn7');readClick('Btn7')">
-                Onions
-            </div>
-
-            <div type="button" class="buttonme" id="submitBtn8" onclick="btnColor('submitBtn8');readClick('Btn8')">
-                Cheese
-            </div>
-
             <div type="button" class="buttonme" id="submitBtn9" onclick="btnColor('submitBtn9');readClick('Btn9')">
                 Lemon
-            </div>
-
-            <div type="button" class="buttonme" id="submitBtn10" onclick="btnColor('submitBtn10');readClick('Btn10')">
-                Potatoes
-            </div>
-
-            <div type="button" class="buttonme" id="submitBtn11" onclick="btnColor('submitBtn11');readClick('Btn11')">
-                Pasta
             </div>
 
             <div type="button" class="buttonme" id="submitBtn12" onclick="btnColor('submitBtn12');readClick('Btn12')">
@@ -85,30 +88,30 @@
                     <div style="margin:5%; font-family:'Raleway';font-size:15px;">Pick what ingredients you want to exclude from our list or input your own!</div>
                     <div style="margin-left:5%; font-family:'Raleway';font-size:20px;font-weight:bold">Diet</div>
                     <div class="filter-col">
-                        <input type="checkbox" id="vegetarian" onclick="savePreferences()"/>
+                        <input type="checkbox" id="vegetarian" onclick="savePreferences()" />
                         <label for="vegetarian">Vegetarian</label>
                     </div>
                     <div class="filter-col" name="placeholder"></div>
 
                     <div style="margin-top:20%;margin-left:5%; font-family:'Raleway';font-size:20px;font-weight:bold">Allergen</div>
                     <div class="filter-col">
-                        <input type="checkbox" id="nuts"onclick="savePreferences()" />
+                        <input type="checkbox" id="nuts" onclick="savePreferences()" />
                         <label for="nuts">Nut</label>
                     </div>
                     <div class="filter-col">
-                        <input type="checkbox" id="soy"onclick="savePreferences()" />
+                        <input type="checkbox" id="soy" onclick="savePreferences()" />
                         <label for="soy">Soy</label>
                     </div>
                     <div class="filter-col">
-                        <input type="checkbox" id="shellfish"onclick="savePreferences()" />
+                        <input type="checkbox" id="shellfish" onclick="savePreferences()" />
                         <label for="shellfish">Shellfish</label>
                     </div>
                     <div class="filter-col">
-                        <input type="checkbox" id="gluten" onclick="savePreferences()"/>
+                        <input type="checkbox" id="gluten" onclick="savePreferences()" />
                         <label for="gluten">Gluten</label>
                     </div>
                     <div class="filter-col">
-                        <input type="checkbox" id="dairy" onclick="savePreferences()"/>
+                        <input type="checkbox" id="dairy" onclick="savePreferences()" />
                         <label for="dairy">Dairy</label>
                     </div>
                     <div class="filter-col">
@@ -116,22 +119,25 @@
                         <label for="seafood">Seafood</label>
                     </div>
 
-                </div><!--
-                <div class="filter-col2" style=" height:90% ;background-color: darkgray;float:right;">
+                </div>
+
+                <!--
+                <div class="filter-col2" style=" height:80% ;background-color: darkgray;float:right;">
                     <div class="filter-col" style="font-family:'Raleway'; font-size:20px; font-weight:bold; ">Other:
                         <textarea id="customIngredient" placeholder="Enter Ingredient" style="width:80%; resize:none;"></textarea>
                     </div>
-                    <button type="button" class="btn btn-primary btn-md" style="width:35%; margin-top:17%; margin-right:10%; ">Apply</button>
+                    <button type="button" id = "add" onclick="applyCustom()" class="btn btn-primary btn-md" style="width:35%; margin-top:17%; margin-right:10%; ">Apply</button>
 
                     <div id="listHolder" style="padding:10% 0 0 0">
-                        <ul>
+                        <ul id="list">
                             <li>Coffee</li>
                             <li>Tea</li>
                             <li>Milk</li>
                         </ul>
                     </div>
-                </div>-->
-                
+                </div>
+
+-->
                 <!--
                 <div style="border:0px; float:right; margin-top:1%; margin-right:5px;" id="gotoFilters">
                     <button type="button" class="btn btn-info" style="">Filters</button>
@@ -139,10 +145,14 @@
                 <div style="border:0px; float:left; margin-top:1%; margin-left: 30px;margin-right:30px">
                     <button type="button" class="btn btn-info" onclick="returnHome()" style="">Home</button>
                 </div>
-<!--
+                <div style="border:0px; float:left; margin-top:1%; margin-left: 30px;margin-right:30px">
+                    <button type="button" class="btn btn-info" onclick="printButton()" style="">Print Ingredient List and Recipe</button>
+                </div>
+                <!--
                 <div style="border:0px; float:right; margin-top:1%; margin-right:5px;position:relative;" id="closeFilters">
                     <button type="button" class="btn btn-info" onclick="savePreferences()" ;style="">Save Preferences</button>
                 </div>-->
+
             </div>
 
 

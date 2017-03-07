@@ -27,6 +27,17 @@ $(document).ready(function() {
     
 })
 
+//Defining a listener for our button, specifically, an onclick handler
+function applyCustom() {
+    //First things first, we need our text:
+    var text = document.getElementById("customIngredient").value; //.value gets input values
+
+    //Now construct a quick list element
+    var li = "<li>" + text + "</li>";   
+    //Now use appendChild and add it to the list!
+    document.getElementById("list").appendChild(li);
+}
+
 var submitBtn = document.getElementById("submitBtn");
 
 function btnColor(btn) {
