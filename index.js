@@ -1,9 +1,9 @@
-/*
+
 window.onload = function() {
     checkPreferences();
     resetData()
 };
-*/
+
 
 firebaseRef = firebase.database().ref();
 
